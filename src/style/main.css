@@ -5,30 +5,42 @@ body {
   font-weight: 100;
 }
 
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+  width: 940px;
+  margin: 0 auto;
+}
+
+
 /* 헤더 */
 .header {
   background-color: yellow;
-  width: 940px;
+
 }
 
 /* 비주얼 */
 .visual {
   background-color: lightblue;
-  inline-size: 940px;
-  /* width랑 같나? */
+
 }
 
 /* 메인 */
 .main {
   background-color: lightsalmon;
+
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lightgreen;
+
 }
 
 /* 푸터 */
 .footer {
   background-color: lightslategray;
+
 }
