@@ -15,6 +15,7 @@ body {
 .visual {
   background-color: lightblue;
   inline-size: 940px;
+  /* width랑 같나? */
 }
 
 /* 메인 */
