@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
+:root {
+  --container-size: 940px;
+}
+
+
 body {
   font-family: "Noto Sans KR", sans-serif;
-  font-weight: 100;
 }
 
 .header,
@@ -10,7 +14,8 @@ body {
 .main,
 .slogan,
 .footer {
-  width: 940px;
+  width: var(--container-size, 940px);
+  /*940px은 --container-size 없을 때 저걸로 해달라는거임*/
   margin: 0 auto;
 }
 
