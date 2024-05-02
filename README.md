@@ -1,5 +1,3 @@
-###### EUID ╳ Likelion
-
 # 웹카페(Basic)
 
 웹카페(Basic) 실습 저장소
@@ -32,3 +30,16 @@ npm install
 ```sh
 npm run dev
 ```
+
+
+
+
+
+
+# 웹카페 실습
+- 스타일 시트 연결(Normalize, Reset)
+- main.css
+- HTML 기본 구조(헤더,,,푸터 5단)
+- width, inline-size (논리특성)
+- border, padding, margin (기본 박스모델)
+- 변수 (Custom Property)
