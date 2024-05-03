@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
 :root {
   --container-size: 940px;
 }
 
 /* 버튼 스타일 */
-button {
+button,
+a {
+  display: inline-block;
   width: 100px;
   padding: 20px;
-  border: 1px soild;
+  border: 1px solid currentColor;
   border-radius: 10px;
 }
 
@@ -20,12 +22,10 @@ body {
 .visual,
 .main,
 .slogan,
-.footer {
+.footer-inner {
   width: var(--container-size, 940px);
-  /*940px은 --container-size 없을 때 저걸로 해달라는거임*/
   margin: 0 auto;
 }
-
 
 /* 헤더 */
 .header {
@@ -36,11 +36,11 @@ body {
 
 /* 비주얼 */
 .visual {
-  background-color: lightblue;
+  background-color: pink;
   height: 10vh;
 }
 
-/* 메인 */
+/* 메인 콘텐츠 */
 .main {
   background-color: skyblue;
   height: 60vh;
@@ -60,7 +60,6 @@ body {
 .slogan {
   background-color: lime;
   height: 10vh;
-
 }
 
 /* 푸터 */
