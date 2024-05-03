@@ -40,21 +40,22 @@ body {
 
 .group {
   border: 1px solid red;
+  margin: 0 20px;
 }
 
-.group1 {
+.group:nth-child(1) {
   width: 250px;
   float: left;
   background-color: orange;
 }
 
-.group2 {
+.group:nth-child(2) {
   width: 380px;
   float: left;
   background: silver;
 }
 
-.group3 {
+.group:nth-child(3) {
   width: 190px;
   float: left;
 }
