@@ -38,11 +38,17 @@ body {
   height: 60vh;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  /* justify-content: space-between;
   /* 메인 축 */
-  align-items: stretch;
+  /* align-items: stretch; */
   /* 교차 축*/
-  padding: 28px 16px 30px;
+  /* padding: 28px 16px 30px;  */
+}
+
+.group-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
 }
 
 .group {
