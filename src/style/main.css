@@ -23,31 +23,45 @@ body {
 /* 헤더 */
 .header {
   background-color: yellow;
-
+  height: 10vh;
+  padding: 0 50px;
 }
 
 /* 비주얼 */
 .visual {
   background-color: lightblue;
-
+  height: 10vh;
 }
 
 /* 메인 */
 .main {
-  background-color: lightsalmon;
+  background-color: skyblue;
+  height: 60vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  /* 메인 축 */
+  align-items: stretch;
+  /* 교차 축*/
+}
 
+.group {
+  border: 1px solid red;
 }
 
 /* 슬로건 */
 .slogan {
-  background-color: lightgreen;
+  background-color: lime;
+  height: 10vh;
 
 }
 
 /* 푸터 */
 .footer {
-  background-color: lightslategray;
-
+  background-color: orange;
 }
 
-/*마진, 패딩, 보더, 변수까지 함*/
+.footer-inner {
+  background: yellow;
+  height: 10vh;
+}
