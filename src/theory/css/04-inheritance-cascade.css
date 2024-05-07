@@ -3,26 +3,37 @@ body {
   font-size: 30px;
 }
 
+/* 1 */
 div {
   border: 1px solid blue;
 }
 
+/* 1000000 */
 h1 {
   color: green !important;
 }
 
+/* 10 */
 .heading {
   color: pink;
 }
 
+/* 100 */
+#heading {
+  color: pink;
+}
+
+/* 11 */
 h1.heading {
   color: purple;
 }
 
+/* 10 */
 .techit {
   color: gray;
 }
 
+/* 10 - 상속 */
 .container {
   color: blue;
 }
