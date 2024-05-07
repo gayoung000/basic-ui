@@ -1,0 +1,15 @@
+  p {
+    background-color: yellow;
+    border: 1px solid blue;
+    /* padding: 20px;*/
+    inline-size: 600px;
+  }
+
+  span {
+    display: inline-block;
+    background-color: pink;
+    border: 1px solid blue;
+    padding: 20px;
+    width: 200px;
+    margin: 50px 20px
+  }
