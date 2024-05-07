@@ -1,0 +1,52 @@
+/* 텍스트 링크 모음 */
+:root {
+  --base-font-family: "SUIT Variable", sans-serif;
+}
+
+/* 컴포넌트 */
+.member-service {
+  --font-size: 0.875rem;
+  /* 14px */
+
+  font-size: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  text-align: right;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    font-size: var(--font-size);
+
+
+    a {
+      display: inherit;
+      padding: 8px 8px 8px 4px;
+      margin: 0;
+      font-variant: small-caps;
+      text-transform: uppercase;
+      color: inherit;
+      /* 부모로부터 상속받고 직접 지정하기 */
+      text-decoration: none;
+    }
+
+    /* a:link {
+      color: green;
+    }
+
+    a:visited {
+      color: gray;
+    }
+
+    a:active {
+      color: red;
+    }
+
+    a:hover,
+    a:focus {
+      color: yellow;
+    } */
+
+  }
+}
