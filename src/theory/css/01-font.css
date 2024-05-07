@@ -1,0 +1,29 @@
+/* 단위
+절대단위 - px
+상대단위 - em (부모로 부터 상속)
+상대단위 - rem (html 요소를 기준으로 계산)
+상대단위 - vw (뷰포트를 기준으로 계산)
+ %, cqw .... */
+
+h1 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+div {
+  font-size: 1.5em;
+}
+
+/* 2em - 상속된 글자 크기에 비례 */
+p {
+  font-size: 2rem;
+  line-height: 1;
+  /* 0말고 원래 단위 생략하면 안됨..*/
+}
+
+/* viewport 크기 */
+@media (max-width: 767px) {
+  p {
+    font-size: 3vw;
+  }
+}
