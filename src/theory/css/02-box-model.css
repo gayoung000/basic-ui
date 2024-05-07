@@ -1,0 +1,31 @@
+div {
+  border: 1px solid red;
+}
+
+[class^="box"] {
+  /* [] 클래스가 있는 경우, ^= 클래스 이름 중에서 "box"로 시작하는 것 */
+  background-color: yellow;
+  padding: 20px;
+}
+
+.box1 {
+  width: 500px;
+  box-sizing: border-box
+}
+
+/* 부모body 크기 16 * 30 = 480 */
+.box2 {
+  width: 30em;
+  margin-bottom: 50px;
+}
+
+/* 루트 크기 16 * 25 */
+.box3 {
+  width: 25rem;
+  margin-top: 20px;
+}
+
+.box4 {
+  inline-size: 50vw;
+  margin: 0 auto;
+}
