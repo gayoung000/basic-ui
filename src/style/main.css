@@ -1,5 +1,10 @@
+@import url(./theme.css);
+
 :root {
   --container-size: 940px;
+  --primary: var(--orange-200, #ED552F);
+  --secondary: var(--orange-100, #E8852E);
+  --border-primary: var(--gray-900, #292929);
 }
 
 /* 기본 박스 사이징 설정 */
@@ -31,7 +36,7 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: #fff;
+  background-color: var(--primary);
   height: 120px;
   padding: 0 28px;
   border-radius: 0 0 15px 15px;
