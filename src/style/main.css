@@ -32,7 +32,7 @@ body {
 .header {
   background-color: #fff;
   height: 120px;
-  padding: 0 50px;
+  padding: 0 28px;
   border-radius: 0 0 15px 15px;
   position: relative;
 }
@@ -43,6 +43,36 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+}
+
+/* 텍스트 링크 모음 */
+.member-service {
+  --spacing: 8px;
+
+  translate: var(--spacing, 8px) 0;
+  font-size: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  text-align: right;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.875rem;
+
+
+    a {
+      display: inherit;
+      padding: var(--spacing, 8px) var(--spacing, 8px) var(--spacing, 8px) 4px;
+      margin: 0;
+      font-variant: small-caps;
+      text-transform: uppercase;
+      color: inherit;
+      /* 부모로부터 상속받고 직접 지정하기 */
+      text-decoration: none;
+    }
+  }
 }
 
 /* 비주얼 */
