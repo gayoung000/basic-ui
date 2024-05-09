@@ -18,14 +18,25 @@
 
   input {
     flex-grow: 1;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
+    border: 0;
     border-radius: 3px;
     padding: 1px 1px 1px 8px;
     height: 24px;
     block-size: 24px;
     width: 100%;
   }
+
+  input:focus {
+    outline: 0;
+  }
+
+  &.form-input:focus-whith {
+    border-bottom: 1px solid red;
+  }
 }
+
+
 
 /* button 컴포넌트 */
 .button {
@@ -39,12 +50,7 @@
   color: var(--color);
   border-radius: var(--radius);
   white-space: nowrap;
-
-  &:focus {
-    outline: 0;
-  }
 }
-
 
 /* 링크 텍스트 컴포넌트 (아이콘 유형) */
 .icon-link {
