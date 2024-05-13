@@ -1,0 +1,30 @@
+@import url(default.css);
+
+.container {
+  div {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #000;
+  }
+
+  /* main과 sidebar을 그룹핑 */
+  .wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 50px;
+  }
+
+  .main {
+    background-color: yellow;
+    flex-basis: 0px;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+
+  .sidebar {
+    background-color: pink;
+    flex-basis: 200px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
