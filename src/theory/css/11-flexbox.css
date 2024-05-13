@@ -17,12 +17,11 @@
   } */
 }
 
-.container-flude {
+.container-fluid {
   margin: 0 auto;
-  /* width: 80%;
-  max-width: 800px;
+  width: 80%;
+  /* max-width: 800px;
   min-width: 500px; */
-
   /* width: clamp(500px, 80%, 800px); */
 }
 
@@ -55,6 +54,7 @@
 }
 
 .search {
+  flex-basis: 500px;
   flex-grow: 1;
 }
 
@@ -75,20 +75,22 @@
   flex-flow: row nowrap;
   column-gap: 50px;
   flex: 1 0 0;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .main {
-  flex-basis: 200px;
-  flex-grow: 5;
+  /* flex-grow: 1;
   flex-shrink: 0;
+  flex-basis: 0; */
+  flex: 1 0 0;
 }
 
 
 .sidebar {
-  flex-basis: 200px;
-  flex-grow: 2;
+  /* flex-grow: 0;
   flex-shrink: 0;
+  flex-basis: 200px; */
+  flex: 0 0 150px;
 }
 
 .footer {
