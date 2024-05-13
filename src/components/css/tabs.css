@@ -1,0 +1,36 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+
+body,
+h1 {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.tabs {
+  background: aqua;
+  width: 400px;
+  inline-size: 400px;
+}
+
+/* 탭 컴포넌트 */
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  /* 텍스트가 가운데 정렬 하기 위해 flex, flex-flow, justify-content */
+  border: 1px solid gray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  background-color: lightgray;
+  color: gray;
+
+  &.is-selected {
+    background-color: white;
+    color: orangered;
+  }
+}
