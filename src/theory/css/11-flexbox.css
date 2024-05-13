@@ -1,17 +1,16 @@
-@import url(default.css);
+@import url(/theory/css/default.css);
 
 
-/* body {
-  font-size: clamp(0.75rem, 3vw, 2.25rem);
-} */
-
+body {
+  /* font-size: clamp(0.75rem, 3vw, 2.25rem); */
+}
 
 .container {
   display: flex;
   flex-flow: column nowrap;
   height: 100vh;
 
-  /* div {
+  /* div{
     background-color: #fff;
     box-shadow: 0 0 0 1px #000;
   } */
@@ -20,16 +19,13 @@
 .container-fluid {
   margin: 0 auto;
   width: 80%;
-  /* max-width: 800px;
-  min-width: 500px; */
-  /* width: clamp(500px, 80%, 800px); */
+  /* width: clamp(500px, 80%, 1200px); */
 }
 
 .container-fixed {
   width: 1200px;
   margin: 0 auto;
 }
-
 
 .header {
   height: 70px;
@@ -38,7 +34,7 @@
   flex-flow: row nowrap;
   align-items: center;
   gap: 20px;
-  padding: 0 50px;
+  padding: 0 20px;
 
   div {
     background-color: #fff;
@@ -46,10 +42,9 @@
   }
 }
 
-
 .logo {
-  /* margin-right: auto; */
-  /* margin-inline-end: auto; */
+  /* margin-right: auto;
+  margin-inline-end: auto; */
   flex-shrink: 0;
 }
 
@@ -63,13 +58,11 @@
   flex-shrink: 0;
 }
 
-
 .navigation {
   height: 50px;
   block-size: 50px;
 }
 
-/* main과 sidebar을 그룹핑 */
 .wrapper {
   display: flex;
   flex-flow: row nowrap;
@@ -78,13 +71,22 @@
   /* overflow: auto; */
 }
 
+/* .main과 .sidebar를 Grouping */
 .main {
   /* flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0; */
   flex: 1 0 0;
-}
+  box-shadow: 0 0 0 1px #000;
+  min-width: 300px;
 
+  .pagination {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+}
 
 .sidebar {
   /* flex-grow: 0;
@@ -96,4 +98,40 @@
 .footer {
   height: 50px;
   block-size: 50px;
+}
+
+
+.pagination {
+  --text-color: var(--light-blue);
+  --selected-text-color: var(--dark-blue);
+
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem;
+
+  button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    flex: 0 0 2rem;
+
+  }
+
+  div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1 1 0;
+
+    a {
+      /* color: var(--text-color); */
+      color: red;
+      padding: 0.5rem 1rem;
+
+      &.is-selected {
+        color: var(--dark-blue);
+        font-weight: 700;
+      }
+    }
+  }
 }
