@@ -22,7 +22,8 @@
   /* width: 80%;
   max-width: 800px;
   min-width: 500px; */
-  width: clamp(500px, 80%, 800px);
+
+  /* width: clamp(500px, 80%, 800px); */
 }
 
 .container-fixed {
@@ -34,7 +35,34 @@
 .header {
   height: 70px;
   block-size: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+  padding: 0 50px;
+
+  div {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #000;
+  }
 }
+
+
+.logo {
+  /* margin-right: auto; */
+  /* margin-inline-end: auto; */
+  flex-shrink: 0;
+}
+
+.search {
+  flex-grow: 1;
+}
+
+.login {
+  order: 1;
+  flex-shrink: 0;
+}
+
 
 .navigation {
   height: 50px;
