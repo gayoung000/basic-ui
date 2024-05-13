@@ -5,8 +5,7 @@
 
 body,
 h1 {
-  margin-left: 20px;
-  font-size: 16px;
+  margin: 20px;
 }
 
 .tabs {
@@ -16,12 +15,6 @@ h1 {
 }
 
 /* 탭 컴포넌트 */
-.tab-list {
-
-  display: flex;
-  flex-flow: row nowrap;
-}
-
 .tab {
   /* 텍스트가 가운데 정렬 하기 위해 flex, flex-flow, justify-content */
   border: 1px solid gray;
@@ -31,15 +24,22 @@ h1 {
   color: gray;
 
   &.is-selected {
-    background-color: white;
+    border-color: currentColor currentColor white currentColor;
     color: orangered;
+    background-color: white;
   }
 }
 
+/* 탭 컴포넌트 그룹 */
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+
 /* 탭 패널, 탭 패널 아이템 */
 .tab-panel {
-  /* display: flex; */
-  padding-top: 24px;
+  padding-top: 1.5rem;
   display: none;
   flex-flow: column nowrap;
   gap: 0.5rem;
@@ -69,10 +69,10 @@ h1 {
       flex: 0 0 auto;
     }
   }
-}
 
-.tabmore {
-  position: absolute;
-  top: 0;
-  right: 0;
+  .tab-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
