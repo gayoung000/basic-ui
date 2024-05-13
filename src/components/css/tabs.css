@@ -10,13 +10,14 @@ h1 {
 }
 
 .tabs {
-  background: aqua;
-  width: 400px;
-  inline-size: 400px;
+  width: 50%;
+  inline-size: 50%;
+  position: relative;
 }
 
 /* 탭 컴포넌트 */
 .tab-list {
+
   display: flex;
   flex-flow: row nowrap;
 }
@@ -33,4 +34,45 @@ h1 {
     background-color: white;
     color: orangered;
   }
+}
+
+/* 탭 패널, 탭 패널 아이템 */
+.tab-panel {
+  /* display: flex; */
+  padding-top: 24px;
+  display: none;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+
+  &.is-selected {
+    display: flex;
+  }
+
+  .tab-panel-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    a {
+      /* display: flex; */
+      /* flex-flow: row nowrap; */
+      /* gap: 0.5rem; */
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    span {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.tabmore {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
