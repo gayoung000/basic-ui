@@ -1,0 +1,31 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+@import url(./grid.css);
+
+
+/* 웹카페 반응형 */
+.container {
+  /* width: 100%; */
+  min-height: 100vh;
+  /* 그리드 했는데 반응이 없다? 높이를 고정해서 그럼. min-heigh를 줘야*/
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  /*이걸 하면 각각의 콘텐츠 너비로 줄어듦 */
+
+  .header,
+  .navigation,
+  .footer {
+    height: 100px;
+    width: 100%;
+  }
+
+  .main {
+    /* flex-grow: 1; */
+    flex: 1 0 auto;
+    max-width: 100%;
+    width: 90%;
+    gap: 24px;
+  }
+}
