@@ -3,6 +3,10 @@
 @import url(/style/base.css);
 @import url(./grid.css);
 
+/* 임시 레이아웃 */
+body {
+  margin-top: 50px;
+}
 
 /* 웹카페 반응형 */
 .container {
@@ -30,8 +34,16 @@
   }
 }
 
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+
+}
+
 /* 햄버거 버튼 */
 .burger-button {
+  margin: 100px;
   background: red;
   border: 0;
   padding: 0;
@@ -46,6 +58,7 @@
     background-color: white;
     left: 0;
     border-radius: 20px;
+    transition: all 200ms;
   }
 
   .burger-bar-top {
@@ -62,6 +75,34 @@
     translate: 0 -100%;
   }
 }
+
+/* is-actvie 클래스가 있을 때 */
+.burger-button.is-active {
+  overflow: hidden;
+
+  span {}
+
+  .burger-bar-top,
+  .burger-bar-bottom {
+    top: 50%;
+    translate: 0 -50%;
+  }
+
+  .burger-bar-top {
+    rotate: 45deg;
+
+  }
+
+  .burger-bar-middle {
+    translate: -100% -50%;
+  }
+
+  .burger-bar-bottom {
+    rotate: -45deg;
+  }
+}
+
+
 
 /* tansition - 애니메이션 */
 /* 내비게이션 */
