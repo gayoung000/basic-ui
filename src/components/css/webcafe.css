@@ -49,24 +49,32 @@ body {
   padding: 0;
   width: 50px;
   height: 50px;
+  /* overflow: hidden; */
   z-index: 10;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 
   span {
     background-color: #fff;
     border-radius: 20px;
     width: 100%;
     height: 20%;
-    transition: all 2000ms;
+    transition: all 1000ms;
+    grid-area: 1 / 1 / 2 / 2;
   }
 
-  .burger-bar-top {}
+  .burger-bar-top {
+    align-self: start;
+  }
 
-  .burger-bar-middle {}
+  .burger-bar-middle {
+    align-self: center;
+  }
 
-  .burger-bar-bottom {}
+  .burger-bar-bottom {
+    align-self: end;
+  }
 }
 
 /* is-actvie 클래스가 있을 때 */
@@ -76,11 +84,11 @@ body {
   span {}
 
   .burger-bar-top,
-  .burger-bar-bottom {}
+  .burger-bar-bottom {
+    align-self: center;
+  }
 
   .burger-bar-top {
-    rotate: 45deg;
-    translate: 0 100%;
     rotate: 45deg;
   }
 
@@ -89,7 +97,6 @@ body {
   }
 
   .burger-bar-bottom {
-    translate: 0 -100%;
     rotate: -45deg;
   }
 }
