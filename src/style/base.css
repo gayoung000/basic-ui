@@ -12,6 +12,7 @@ body *::after {
 body {
   font-family: var(--base-font-family);
   line-height: 1.15;
+  margin: 0;
 }
 
 *:focus {
@@ -19,5 +20,5 @@ body {
 }
 
 *:focus-visible {
-  outline: 2px solid green;
+  outline: 2px solid #24388D;
 }
