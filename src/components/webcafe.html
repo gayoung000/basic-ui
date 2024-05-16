@@ -16,8 +16,22 @@
 
   <!-- Grid System -->
   <div class="container">
-    <div class="header yellow grid-container">헤더</div>
-    <div class="navigation pink">내비게이션</div>
+    <div class="header yellow grid-container">
+      헤더
+      <button type="button" aria-label="메인 메뉴 열기" class="burger-button">
+        <span class="burger-bar burger-bar-top"></span>
+        <span class="burger-bar burger-bar-middle"></span>
+        <span class="burger-bar burger-bar-bottom"></span>
+      </button>
+    </div>
+    <div class="navigation pink">
+      <nav class="menu" aria-label="메인 메뉴">
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록1</a></div>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록2</a></div>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록3</a></div>
+        <div class="menu-item"><a href="/" class="menu-link">링크 목록4</a></div>
+      </nav>
+    </div>
     <div class="main green grid-container">
       <div class="book skyblue cols-6 sm-cols-4 lg-cols-6">추천서적</div>
       <div class="news orange cols-6 sm-cols-8 lg-cols-6">새소식</div>
