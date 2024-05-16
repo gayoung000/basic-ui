@@ -1,10 +1,5 @@
-@import url(./theme.css);
-
 :root {
   --container-size: 940px;
-  --primary: var(--orange-200, #ED552F);
-  --secondary: var(--orange-100, #E8852E);
-  --border-primary: var(--gray-900, #292929);
 }
 
 /* 기본 박스 사이징 설정 */
@@ -20,7 +15,7 @@ body {
   line-height: 1.15;
   font-family: "SUIT Variable", sans-serif;
   background-color: #ccc;
-  background-image: url(../images/bg_flower.png), linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 50%, #fff 100%);
+  background-image: url(/images/bg_flower.png), linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 50%, #fff 100%);
   background-repeat: no-repeat;
   background-position: 50% 0, 0 0;
 }
@@ -36,7 +31,7 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: var(--primary);
+  background-color: #fff;
   height: 120px;
   padding: 0 28px;
   border-radius: 0 0 15px 15px;
@@ -50,13 +45,13 @@ body {
   top: 45px;
   left: 60px;
   margin: 0;
-  /* 기존 브라우저 속성값이 설정된거 지우기 */
   font-size: 1em;
 
   a,
   img {
     display: block;
-    /* vertical-align: top; */
+    /* 인라인 상자 정렬 */
+    /* vertical-align: middle; */
   }
 }
 
@@ -76,32 +71,31 @@ body {
     margin: 0;
     font-size: 0.875rem;
 
-
     a {
       display: inherit;
-      padding: var(--spacing, 8px) var(--spacing, 8px) var(--spacing, 8px) 4px;
-      margin: 0;
+      padding: 8px var(--spacing, 8px) 8px 4px;
       font-variant: small-caps;
+      margin: 0;
       text-transform: uppercase;
       color: inherit;
-      /* 부모로부터 상속받고 직접 지정하기 */
       text-decoration: none;
     }
   }
 }
 
+
+
 /* 비주얼 */
 @keyframes moveEffect {
   0% {
     font-size: 12px;
-    transform: translate(0, 0);
+    translate: 0 0;
+
   }
-
-
 
   100% {
     font-size: 24px;
-    transform: translate(400px, 75px);
+    translate: 320px 75px;
   }
 }
 
@@ -110,61 +104,56 @@ body {
     opacity: 1;
   }
 
-  50% {
+  100% {
     opacity: 0;
   }
-
-  100% {
-    opacity: 1;
-  }
 }
-
-.visual-text {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  animation-name: moveEffect;
-  animation-duration: 5000ms;
-  animation-fill-mode: forwards;
-  background: lime;
-  display: inline-block;
-  z-index: 1;
-  position: relative;
-}
-
 
 .visual {
   height: 120px;
   block-size: 120px;
   position: relative;
 
-  &::before,
-  &::after {
-    animation-name: fadeEffect;
-    animation-duration: 4000ms;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    content: "";
-    width: inherit;
-    inline-size: inherit;
-    height: inherit;
-    block-size: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-  }
 }
 
+.visual::before,
+.visual::after {
+  animation-name: fadeEffect;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  content: "";
+  width: inherit;
+  inline-size: inherit;
+  height: inherit;
+  block-size: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+}
 
 .visual::before {
   /* z-index: 1; */
-  background-image: url(../images/ani_flower_01.png), url(../images/ani_flower_02.png);
+  background-image: url(/images/ani_flower_01.png), url(/images/ani_flower_02.png);
   background-position: 0 -10px, 600px 10px;
 }
 
 .visual::after {
-  background-image: url(../images/ani_flower_03.png), url(../images/ani_flower_04.png);
+  background-image: url(/images/ani_flower_03.png), url(/images/ani_flower_04.png);
   background-position: 300px 0, 800px 30px;
   animation-delay: 2000ms;
+}
+
+
+.visual-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation-name: moveEffect;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
 }
 
 
@@ -220,6 +209,7 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                          flex를 지원하는 웹브라우저를 위한 스타일                   */
 /* -------------------------------------------------------------------------- */
+
 @supports (display: flex) {
   .main {
     display: flex;
