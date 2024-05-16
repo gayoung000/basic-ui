@@ -55,7 +55,7 @@
 .sprite {
   height: 60px;
   background-color: hotpink;
-  background-image: url(/images/sprite_main.png);
+  background-image: url(/src/images/sprite_main.png);
   background-repeat: no-repeat;
   text-indent: 65px;
 }
