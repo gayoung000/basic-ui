@@ -85,9 +85,21 @@
   fill: red;
 }
 
-/* 스프라이트를 배경 이미지로 불러오기 */
+
+/* 스택 방식 : svg 태그를 직접 불러와서 스프라이트를 마스크 이미지로 불러오기 */
+/* 색깔변경 가능 */
 .sprite-icon {
   width: 100px;
   height: 100px;
-  background-image: url(/images/icons/_sprite.svg#dot_circled);
+  background-color: green;
+  mask-image: url(/images/icons/stack.svg#dot_circled);
+}
+
+/* 스택 방식 : svg 태그를 직접 불러와서 스프라이트를 배경 이미지로 불러오기 */
+/* 색깔변경 불가능 */
+.sprite-icon2 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  background-image: url(/images/icons/stack.svg#dot_circled);
 }
