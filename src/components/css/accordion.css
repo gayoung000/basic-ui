@@ -1,0 +1,45 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* 임시 값 */
+body {
+  margin: 100px;
+  background-color: black;
+  color: white;
+}
+
+.accordion {
+
+  background: rgb(45, 45, 45);
+
+  details svg {
+    transition: all 200ms;
+  }
+
+  details[open] svg {
+    rotate: 45deg;
+  }
+
+  summary {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding: 1.3rem;
+  }
+
+  div {
+    padding: 1.3rem;
+    line-height: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: underline;
+    }
+  }
+}
