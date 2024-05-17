@@ -45,3 +45,49 @@
   flex-flow: row nowrap;
   align-items: center;
 }
+
+[class^="icon"] {
+  width: 100px;
+  height: 100px;
+}
+
+.svg-icon-search {
+  width: 150px;
+  height: 150px;
+
+  path {
+    fill: red;
+
+    @media (prefers-color-scheme: dark) {
+      fill: blue;
+    }
+  }
+}
+
+/* svg 배경 이미지 */
+.plus {
+  width: 100px;
+  height: 100px;
+  mask-image: url(../../images/icons/plus.svg);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  background-color: pink;
+
+  @media (prefers-color-scheme: dark) {
+    fill: blue;
+  }
+}
+
+[role^="img"] {
+  width: 100px;
+  height: 100px;
+
+  fill: red;
+}
+
+/* 스프라이트를 배경 이미지로 불러오기 */
+.sprite-icon {
+  width: 100px;
+  height: 100px;
+  background-image: url(/images/icons/_sprite.svg#dot_circled);
+}
